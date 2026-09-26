@@ -1,15 +1,19 @@
 fun calcularPromedio(nota1: Double, nota2: Double, nota3: Double): Double {
     return (nota1 + nota2 + nota3) / 3.0
 }
-    fun determinarEstado(promedio: Double): String {
+fun determinarEstado(promedio: Double): String {
     return if (promedio >= 3.0) "Aprobado" else "Reprobado"
+}
+
+fun Excelencia(promedio: Double): Boolean {
+    return promedio >= 4.5
 }
 
 
 fun main () {
     val nombreEstudiante = "Santiago"
     val nota1 = 4.2
-    val nota2 = 3.5
+    val nota2 = 5.0
     val nota3 = 4.5
 
     val promedio = calcularPromedio(nota1, nota2, nota3)
@@ -18,4 +22,8 @@ fun main () {
     println("Estudiante: $nombreEstudiante")
     println("Promedio: $promedio")
     println("Estado: $estado")
+
+    if (Excelencia(promedio)){
+        println("Promedio: Excelente")
+    }
 }
