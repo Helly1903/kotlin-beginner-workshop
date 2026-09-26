@@ -15,10 +15,17 @@ fun factorial(number: Int): Long {
     return resultado
 }
 
+fun isEven(number: Int): Boolean{
+    return number % 2 == 0
+}
+
 fun main() {
     val numero = 17
     println("$numero es primo: ${isPrime(numero)}")
 
     val NumeroFactrial = 3
     println("Factorial de $NumeroFactrial: ${factorial(NumeroFactrial)}")
+
+    val NumeroPar = 10
+    println("$NumeroPar es par: ${isEven(NumeroPar)}")
 }
