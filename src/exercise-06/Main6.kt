@@ -1,6 +1,16 @@
-class Product(val nombre: String, val precio: Double, val cantidad: Int)
+
+class Product(val nombre: String, val precio: Double, val cantidad: Int) {
+
+    fun ValorTotalInventario(): Double {
+        return precio * cantidad
+    }
+
+    fun MostrarInformacion() {
+        println("Producto: $nombre | Precio: $precio | Cantidad: $cantidad | Valor Total: ${ValorTotalInventario()}")
+    }
+}
 
 fun main() {
     val Producto1 = Product("Teclado", 80000.0, 14)
-    println(Producto1.nombre)
+    Producto1.MostrarInformacion()
 }
