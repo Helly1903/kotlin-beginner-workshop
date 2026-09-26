@@ -11,6 +11,14 @@ fun CalcularPromedio(numeros: List<Int>): Double {
     return numeros.sum().toDouble() / numeros.size
 }
 
+fun DeterminarMayor(numeros: List<Int>): Int {
+    return numeros.max()
+}
+
+fun DeterminarMenor(numeros: List<Int>): Int {
+    return numeros.min()
+}
+
 fun main(){
     val numeros = listOf<Int>(1,2,3,4,5,6,7,8,9,10)
     MostrarLista(numeros)
@@ -19,4 +27,6 @@ fun main(){
     val Promedio = CalcularPromedio(numeros)
     println("Suma: $Suma")
     println("Promedio: $Promedio")
+    println("Mayor: ${DeterminarMayor(numeros)}")
+    println("Menor: ${DeterminarMenor(numeros)}")
 }
