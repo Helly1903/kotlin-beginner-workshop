@@ -13,7 +13,7 @@ fun calcularOperacion(num1: Double, num2: Double, operacion: Char): String {
 }
 
 fun main (){
-    val numero1 = 10.0
+    val numero1 = 20.0
     val numero2 = 0.0
     val operacion = '/'
     println(calcularOperacion(numero1, numero2, operacion))
