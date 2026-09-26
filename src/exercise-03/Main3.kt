@@ -4,7 +4,18 @@ fun MostrarTabla(numero: Int) {
     }
 }
 
+fun SumarResultadosTabla(numero: Int): Int {
+    var suma = 0
+    for (i in 1..10) {
+        suma += numero * i
+    }
+    return suma
+}
+
 fun main() {
     val numero = 7
     MostrarTabla(numero)
+
+    val suma = SumarResultadosTabla(numero)
+    println("Suma Total: $suma")
 }
