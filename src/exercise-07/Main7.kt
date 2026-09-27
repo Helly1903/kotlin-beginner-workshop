@@ -16,6 +16,17 @@ fun BuscarPorNombre(contactos: MutableList<Contact>, nombre: String): Contact? {
     return contactos.find { it.nombre.equals(nombre, ignoreCase = true) }
 }
 
+fun EliminarPorNombre(Contactos: MutableList<Contact>, nombre: String) {
+    val contacto = BuscarPorNombre(Contactos, nombre)
+    if (contacto != null) {
+        Contactos.remove(contacto)
+        println("Contact eliminado: ${contacto.nombre}")
+    }
+    else{
+        println("No existe un contacto con el nombre: ${nombre}")
+    }
+}
+
 
 fun main () {
     val Contactos = mutableListOf(
@@ -37,4 +48,9 @@ fun main () {
         println("Contacto no encontrado")
     }
 
+    EliminarPorNombre(Contactos, "Pedro")
+    EliminarPorNombre(Contactos, "ArmandoCasas")
+
+    println("===== Lista Final =====")
+    ListarContactos(Contactos)
 }
