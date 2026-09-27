@@ -1,6 +1,13 @@
 
 class Contact (val nombre: String, val telefono: String, val correo: String)
 
+fun ListarContactos(Contactos: List<Contact>) {
+    for (contacto in Contactos) {
+        println("${contacto.nombre} --  ${contacto.telefono} -- ${contacto.correo}")
+    }
+}
+
+
 fun main () {
     val Contactos = mutableListOf(
         Contact("Ana", "1234567890", "ana@gmail.com"),
@@ -9,5 +16,5 @@ fun main () {
         Contact("Pedro", "098765321", "Pedro@gmail.com"),
         Contact("Pablo", "1234567890", "Pablo@gmail.com"),
     )
-    println("Contactos Iniciales: ${Contactos.size}")
+        ListarContactos(Contactos)
 }
